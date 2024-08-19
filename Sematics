@@ -1,0 +1,30 @@
+1. What are the new things introduced in HTML5?
+HTML5 introduced several new features and improvements over previous versions:
+
+New Semantic Elements: Tags like <header>, <footer>, <article>, and <section> define the structure of a document.
+Multimedia Support: Native support for audio and video through <audio> and <video> tags, eliminating the need for third-party plugins.
+Graphics and Effects: The <canvas> element allows for drawing graphics directly in the browser, and SVG (Scalable Vector Graphics) is natively supported.
+New Input Types: Form elements like <input type="email">, <input type="date">, and <input type="range"> improve user input handling.
+APIs and Scripting: New APIs like Geolocation, Web Storage, Web Workers, and WebSocket enhance the capabilities of web applications.
+Improved Accessibility: Enhanced support for ARIA (Accessible Rich Internet Applications) roles to improve accessibility.
+Offline Support: The ApplicationCache and later Service Workers enable offline capabilities and faster load times for web applications.
+
+
+2.What are semantic tags, and can you give a couple of examples?
+Semantic tags are HTML elements that convey meaning about the content they enclose, helping both the browser and developers understand the structure and purpose of the content.
+
+Examples:
+<header>: Represents the header section of a document or a section, typically containing introductory content or navigation links.
+<article>: Defines an independent, self-contained piece of content, such as a blog post, news article, or forum post.
+What are some uses of semantic tags?
+Semantic tags have several important uses:
+
+Improved SEO: Search engines can better understand and rank web pages by analyzing the meaningful structure provided by semantic tags.
+Enhanced Accessibility: Screen readers and other assistive technologies can navigate and interpret content more effectively when semantic tags are used, making websites more accessible to users with disabilities.
+Better Code Readability: Semantic tags make the code easier to read and understand, improving collaboration among developers and making maintenance easier.
+Consistent Structure: They provide a consistent structure for web content, which is beneficial for responsive design and cross-platform compatibility.
+
+
+
+
+
