@@ -1,0 +1,40 @@
+1. What is CSS and why use it?
+CSS (Cascading Style Sheets) is a stylesheet language used to control the presentation and layout of HTML documents. It allows you to apply styles such as colors, fonts, spacing, and positioning to web pages. The main reasons to use CSS include:
+
+Separation of Content and Presentation: CSS keeps the visual presentation separate from the content, making it easier to maintain and update.
+Consistency: CSS enables consistent styling across multiple pages of a website.
+Efficiency: You can apply styles to multiple elements simultaneously, reducing the need for repetitive code.
+Improved User Experience: CSS allows for responsive designs, which adapt to different screen sizes, enhancing the user experience on various devices.
+
+  
+  2. What are the different ways to bring CSS into an HTML file?
+There are three main ways to incorporate CSS into an HTML file:
+
+Inline CSS: You can apply CSS directly to an HTML element using the style attribute.
+html
+Copy code
+<p style="color: blue;">This is a blue paragraph.</p>
+Internal CSS: You can include CSS within the <style> tag inside the <head> section of an HTML document.
+html
+Copy code
+<head>
+  <style>
+    p { color: blue; }
+  </style>
+</head>
+External CSS: You can link to an external CSS file using the <link> tag inside the <head> section. This method is most commonly used for maintaining consistent styles across multiple pages.
+html
+Copy code
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+3. What do you mean by specificity in CSS?
+Specificity in CSS refers to the rules used by the browser to determine which CSS styles are applied to an element when multiple styles conflict. Specificity is calculated based on the types of selectors used:
+
+Inline Styles: Have the highest specificity (e.g., style="color: blue;").
+IDs: Have a higher specificity than classes or elements (e.g., #header).
+Classes, Pseudo-classes, Attribute Selectors: Have a lower specificity than IDs but higher than element selectors (e.g., .button, :hover).
+Element Selectors: Have the lowest specificity (e.g., div, p).
+The specificity hierarchy helps determine which styles are applied when there are conflicting rules. If two selectors have the same specificity, the one that appears later in the CSS or HTML file will take precedence
