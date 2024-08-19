@@ -1,0 +1,11 @@
+What are some tools you might use as a web developer?
+As a web developer, you might use several tools, such as text editors like VS Code, version control systems like Git, frontend frameworks like React, backend frameworks like Node.js, CSS frameworks like Bootstrap, and many more. These tools help you write, manage, and deploy code effectively.
+
+What are some of the features of PW Skills Online Lab, and how are they useful?
+PW Skills Online Lab offers several features like an interactive coding environment, integrated learning resources, collaboration tools, project-based learning, and assessment with feedback. These features are useful as they provide a hands-on coding experience, access to learning materials, opportunities for teamwork, practical project work, and real-time feedback to improve your skills.
+
+
+
+
+
+
