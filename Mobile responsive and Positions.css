@@ -1,0 +1,85 @@
+What are media queries in CSS and their use?
+Media queries are a feature of CSS that allow you to apply styles based on the characteristics of the device or viewport, such as screen size, resolution, or orientation. They are commonly used for responsive web design to adapt the layout and appearance of a website to different devices, such as smartphones, tablets, and desktops. Media queries help ensure that web content is accessible and visually appealing on various screen sizes and resolutions.
+
+Example:
+
+css
+Copy code
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+In this example, different background colors are applied based on the viewport width: light blue for devices up to 600px wide, light green for devices between 601px and 1024px wide, and light coral for devices wider than 1024px.
+
+What is the difference between min-width and max-width in media queries in CSS?
+
+min-width: Applies styles to devices with a viewport width greater than or equal to the specified value. It is used to define styles for larger screens or devices.
+
+css
+Copy code
+@media (min-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+This example applies a padding of 20px to elements with the class .container only when the viewport width is 768px or larger.
+
+max-width: Applies styles to devices with a viewport width less than or equal to the specified value. It is used to define styles for smaller screens or devices.
+
+css
+Copy code
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+}
+This example applies a padding of 10px to elements with the class .container only when the viewport width is 767px or smaller.
+
+Both min-width and max-width can be combined to create responsive breakpoints that adjust the design based on the device's viewport size.
+
+Explain the float property and clear property in CSS with examples.
+
+float Property: The float property is used to position an element to the left or right within its container, allowing other content to wrap around it. It is commonly used for layout purposes, such as creating columns or aligning images.
+
+float: left: Positions the element to the left side of its container.
+float: right: Positions the element to the right side of its container.
+float: none: Removes any floating behavior.
+Example:
+
+css
+Copy code
+.image {
+  float: left;
+  margin-right: 10px;
+}
+In this example, an image is floated to the left, and text will wrap around it with a 10px margin on the right.
+
+clear Property: The clear property is used to control the behavior of elements following a floated element. It specifies whether an element should be moved below floating elements.
+
+clear: left: Moves the element below any preceding left-floated elements.
+clear: right: Moves the element below any preceding right-floated elements.
+clear: both: Moves the element below any preceding floated elements, regardless of direction.
+clear: none: The element can float beside other elements.
+Example:
+
+css
+Copy code
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+In this example, the clearfix class uses the ::after pseudo-element to clear any floats within the element, ensuring that it wraps correctly around floated content. This is a common technique used to clear floats in layout designs.
