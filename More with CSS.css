@@ -1,0 +1,69 @@
+What are padding and margin, and when do you use them?
+
+Padding: Padding is the space between the content of an element and its border. It is used to create space inside the element, making the content not touch the edges of its container. You use padding when you want to add space inside an element but still keep it within the element’s boundaries.
+css
+Copy code
+.box {
+  padding: 20px; /* Adds 20px of space inside the element, between the content and the border */
+}
+Margin: Margin is the space outside the border of an element, creating distance between the element and other surrounding elements. You use margin to control the spacing between elements and to push elements away from each other.
+css
+Copy code
+.box {
+  margin: 20px; /* Adds 20px of space outside the element, between it and other elements */
+}
+
+
+What is the display property, and explain display: inline, display: block, and display: inline-block?
+The display property in CSS specifies how an element is displayed on the page and how it affects the layout.
+
+display: inline: The element does not start on a new line and only takes up as much width as necessary. Other elements can appear beside it on the same line. Inline elements do not respect width or height properties.
+css
+Copy code
+span {
+  display: inline;
+}
+display: block: The element starts on a new line and takes up the full width available. Other elements will appear on the next line. Block elements respect width and height properties.
+css
+Copy code
+div {
+  display: block;
+}
+display: inline-block: The element does not start on a new line but respects width and height properties, allowing you to set specific dimensions. It behaves like an inline element but allows for block-level styling.
+css
+Copy code
+.button {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+}
+
+
+
+Explain min-height, min-width, max-height, and max-width in CSS.
+These properties control the sizing of elements by setting minimum and maximum constraints.
+
+min-height: Specifies the minimum height an element can have. The element cannot be smaller than this value, but it can grow larger if the content or other styles require it.
+css
+Copy code
+.container {
+  min-height: 200px;
+}
+min-width: Specifies the minimum width an element can have. The element cannot be narrower than this value but can expand if necessary.
+css
+Copy code
+.box {
+  min-width: 300px;
+}
+max-height: Specifies the maximum height an element can have. The element cannot grow taller than this value but can be shorter if the content is less.
+css
+Copy code
+.image {
+  max-height: 400px;
+}
+max-width: Specifies the maximum width an element can have. The element cannot be wider than this value but can be narrower if needed.
+css
+Copy code
+.card {
+  max-width: 600px;
+}
