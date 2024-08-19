@@ -1,0 +1,20 @@
+What is the Internet?
+The Internet is a global network of interconnected computers and servers that allows people to communicate, access information, and share resources across vast distances. It’s like a vast digital space where data and services are exchanged.
+
+What is a web browser?
+A web browser is a software application that allows users to access and navigate the Internet. It interprets and displays web pages, enabling users to interact with content like text, images, and videos on websites.
+
+What is a browser engine?
+A browser engine is the core component of a web browser responsible for rendering web pages. It takes the HTML, CSS, and JavaScript of a web page and converts it into the visual representation you see on your screen.
+
+What is a static site?
+A static site is a website that delivers fixed content to users. The web pages do not change in response to user interactions or inputs; they are pre-built and served as-is from the server.
+
+What is a dynamic site?
+A dynamic site is a website that generates content on the fly, often in response to user interactions. It uses server-side scripting to deliver customized content, making the site more interactive and responsive to individual users.
+
+
+
+
+
+
