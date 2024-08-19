@@ -1,0 +1,51 @@
+Why are CSS selectors used in HTML?
+CSS selectors are used in HTML to apply styles to specific elements or groups of elements within an HTML document. They allow you to target elements based on various criteria such as their type, class, ID, attributes, or relationships to other elements. This helps in styling elements consistently, creating layouts, and controlling the appearance of a web page efficiently.
+
+What are the different types of selectors in CSS?
+CSS selectors come in various types, each serving a different purpose:
+
+Element Selector: Targets HTML elements by their tag name (e.g., p, h1).
+css
+Copy code
+p { color: blue; }
+Class Selector: Targets elements with a specific class attribute. Classes are prefixed with a dot (.).
+css
+Copy code
+.highlight { background-color: yellow; }
+ID Selector: Targets a single element with a specific ID attribute. IDs are prefixed with a hash (#).
+css
+Copy code
+#header { font-size: 24px; }
+Attribute Selector: Targets elements based on their attributes and values.
+css
+Copy code
+input[type="text"] { border: 1px solid #ccc; }
+Pseudo-class Selector: Targets elements in a specific state (e.g., :hover, :focus).
+css
+Copy code
+a:hover { color: red; }
+Pseudo-element Selector: Targets specific parts of elements (e.g., ::before, ::after).
+css
+Copy code
+p::first-line { font-weight: bold; }
+Descendant Selector: Targets elements nested inside other elements.
+css
+Copy code
+div p { color: green; }
+Child Selector: Targets direct child elements of a specified element.
+css
+Copy code
+ul > li { list-style-type: none; }
+How do you include external stylesheets and apply them?
+To include external stylesheets and apply them to your HTML document, use the <link> tag inside the <head> section of your HTML file. This tag references an external CSS file and applies the styles defined in that file to your document.
+
+Example:
+
+html
+Copy code
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+rel="stylesheet" specifies that the linked file is a stylesheet.
+href="styles.css" specifies the path to the external CSS file.
+Ensure that the href attribute points to the correct location of the CSS file relative to your HTML document
