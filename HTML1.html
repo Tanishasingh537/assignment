@@ -1,0 +1,79 @@
+
+
+
+1. What is a table in HTML, and what are its properties?
+A table in HTML is used to display data in a structured grid format with rows and columns. The <table> element is used to create a table, and it contains multiple rows (<tr>), each containing cells (<td> for data cells or <th> for header cells).
+
+Properties/Attributes:
+border: Defines the border around the table and cells.
+cellpadding: Sets the space between the cell content and its border.
+cellspacing: Sets the space between individual table cells.
+colspan: Allows a cell to span across multiple columns.
+rowspan: Allows a cell to span across multiple rows.
+Example:
+html
+Copy code
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>30</td>
+  </tr>
+</table>
+  
+2. What are all the media elements in HTML, and how do they work?
+HTML provides various media elements to include multimedia like audio and video in web pages:
+
+<img>: Displays images.
+<audio>: Embeds sound content; can include controls like play, pause, etc.
+html
+Copy code
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
+<video>: Embeds video content; can include controls like play, pause, fullscreen, etc.
+html
+Copy code
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+</video>
+<source>: Specifies multiple media resources for <audio> and <video>.
+<track>: Provides text tracks (e.g., subtitles) for <video> and <audio> elements.
+<picture>: Contains multiple sources for an image, allowing for responsive images.
+<embed>: Embeds external content (e.g., PDFs or Flash) into a webpage.
+<iframe>: Embeds another HTML page within the current page.
+
+  
+3. What is GET and POST in forms, and how are they used?
+GET and POST are two methods used to send data from a form to a server.
+
+GET: Sends form data appended to the URL as query parameters. It’s suitable for non-sensitive data and when you want the data to be bookmarkable.
+Example: form action="submit_form.php" method="get"
+POST: Sends form data in the body of the HTTP request, not in the URL. It’s used for submitting sensitive data and larger amounts of data.
+Example: form action="submit_form.php" method="post"
+
+  
+4. What are all the input types we have in forms?
+HTML forms support various input types to collect different kinds of data from users:
+
+<input type="text">: Single-line text input.
+<input type="password">: Text input with masked characters.
+<input type="email">: Email input, validates email format.
+<input type="number">: Numeric input, often with arrows to adjust the value.
+<input type="radio">: Radio button for selecting one option from a group.
+<input type="checkbox">: Checkbox for selecting one or more options.
+<input type="submit">: Button to submit the form.
+<input type="reset">: Button to reset the form fields to default values.
+<input type="button">: General button, usually requires JavaScript to define actions.
+<input type="date">: Date picker input.
+<input type="file">: File upload input.
+<input type="hidden">: Hidden input, not visible to the user.
+<input type="url">: URL input, validates URL format.
+<input type="tel">: Telephone number input, validates phone number format.
+<input type="range">: Slider control for selecting a value from a range.
+<input type="color">: Color picker input.
+<textarea>: Multi-line text input.
+<select>: Dropdown
