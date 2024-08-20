@@ -1,0 +1,122 @@
+1. How do you reverse a string using setTimeout in JavaScript after a delay of 2 seconds?
+To reverse a string after a delay of 2 seconds using the setTimeout function in JavaScript, you can store the string in a variable named input, and then use setTimeout to execute the reversal after the specified delay. The reversed string will then be printed as the output.
+
+Example:
+
+javascript
+Copy code
+const input = "Hello, World!";
+
+setTimeout(() => {
+  const reversedString = input.split('').reverse().join('');
+  console.log(reversedString);
+}, 2000);
+Explanation: In this code, setTimeout delays the execution of the function by 2 seconds (2000 milliseconds). The string is split into an array of characters, reversed, and then joined back together to form the reversed string.
+
+2. How do you create a random number generator with a delay and progress indication in JavaScript?
+To create a random number generator that generates a random number after a delay of 3 seconds, and displays a progress message every second indicating the time remaining, you can use setTimeout and setInterval functions.
+
+Example:
+
+javascript
+Copy code
+let delay = 3; // Delay in seconds
+
+const countdown = setInterval(() => {
+  console.log(`Time remaining: ${delay} seconds`);
+  delay--;
+  
+  if (delay < 0) {
+    clearInterval(countdown);
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    console.log(`Generated Random Number: ${randomNumber}`);
+  }
+}, 1000);
+Explanation: The program uses setInterval to display the countdown every second, reducing the delay by 1 each time. Once the delay reaches 0, clearInterval stops the countdown, and a random number is generated and displayed.
+
+3. How do you convert prices from USD to INR using a map function in JavaScript?
+To convert a list of item prices from USD to INR using a conversion rate of 1 USD to 80 INR, you can use the map higher-order function to create a new object with the converted prices.
+
+Example:
+
+javascript
+Copy code
+const storeItems = {
+  "item1": 50,
+  "item2": 30,
+  "item3": 20
+};
+
+const conversionRate = 80;
+
+const convertedPrices = Object.fromEntries(
+  Object.entries(storeItems).map(([item, price]) => [item, price * conversionRate])
+);
+
+console.log(convertedPrices);
+Explanation: The map function is applied to the array of entries from the original object, converting each price to INR by multiplying it with the conversion rate. The Object.fromEntries method is then used to convert the array back into an object.
+
+4. How do you filter and capitalize author names for books published after 2010 in JavaScript?
+To filter out books published before 2010 and capitalize the author names of the remaining books, you can use the filter and map functions in JavaScript.
+
+Example:
+
+javascript
+Copy code
+const books = [
+  { title: "Book 1", author: "john doe", year: 2008 },
+  { title: "Book 2", author: "jane smith", year: 2012 },
+  { title: "Book 3", author: "sam wilson", year: 2015 }
+];
+
+const filteredBooks = books
+  .filter(book => book.year > 2010)
+  .map(book => ({
+    ...book,
+    author: book.author.split(' ').map(name => name.charAt(0).toUpperCase() + name.slice(1)).join(' ')
+  }));
+
+console.log(filteredBooks);
+Explanation: The filter function filters out books published before 2010, and the map function capitalizes the first letter of each word in the author's name for the remaining books.
+
+5. How do you validate a URL in JavaScript using a regular expression?
+To validate a URL in JavaScript using a regular expression, you can create a regex pattern that matches URLs starting with http:// or https:// followed by valid characters and a dot, followed by a domain extension.
+
+Example:
+
+javascript
+Copy code
+const urlPattern = /^(https?:\/\/)[\w\-]+(\.[\w\-]+)+$/;
+
+const url = "https://example.com";
+
+if (urlPattern.test(url)) {
+  console.log("The URL is valid.");
+} else {
+  console.log("The URL is not valid.");
+}
+Explanation: The regular expression checks if the input URL starts with http:// or https:// and is followed by valid characters and a domain extension.
+
+6. How do you validate a LinkedIn profile URL in JavaScript?
+To validate a LinkedIn profile URL using a regular expression, you can create a regex that matches the specific LinkedIn URL format and checks for valid characters and length.
+
+Example:
+
+javascript
+Copy code
+const linkedInPattern = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9_-]{5,30}$/;
+
+const linkedInURL = "https://www.linkedin.com/in/johndoe123";
+
+if (linkedInPattern.test(linkedInURL)) {
+  console.log("Valid LinkedIn profile URL.");
+} else {
+  console.log("Invalid LinkedIn profile URL.");
+}
+Explanation: The regex ensures that the LinkedIn URL starts with https://www.linkedin.com/in/ followed by a combination of letters, digits, underscores, or hyphens, with a length of 5 to 30 characters.
+
+
+
+
+
+
