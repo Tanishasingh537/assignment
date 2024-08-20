@@ -1,0 +1,278 @@
+Task 1: Create a Counter Application Using HTML, CSS, and JavaScript
+1. Folder Structure:
+index.html: The HTML file that will contain the structure of the counter app.
+styles.css: The CSS file to style the counter app.
+script.js: The JavaScript file to handle the logic and DOM manipulation.
+2. Code Implementation:
+index.html:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Counter Application</h1>
+        <p id="counter">0</p>
+        <div class="buttons">
+            <button id="increment">+1</button>
+            <button id="decrement">-1</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+styles.css:
+
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.counter-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#counter {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+script.js:
+
+javascript
+Copy code
+// Select the counter element
+let counter = document.getElementById('counter');
+
+// Initialize counter value
+let counterValue = 0;
+
+// Function to update the counter display
+function updateCounter() {
+    counter.textContent = counterValue;
+}
+
+// Increment button
+document.getElementById('increment').addEventListener('click', function() {
+    counterValue++;
+    updateCounter();
+});
+
+// Decrement button
+document.getElementById('decrement').addEventListener('click', function() {
+    counterValue--;
+    updateCounter();
+});
+
+// Reset button
+document.getElementById('reset').addEventListener('click', function() {
+    counterValue = 0;
+    updateCounter();
+});
+Task 2: Create Different Projects with Common Event Listeners
+For this task, you can create multiple small projects where each project uses a different event listener.
+
+Example Projects:
+1. Project 1: Button Click Counter (Using onclick)
+
+Description: A button that counts how many times it has been clicked.
+HTML:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="counter-container">
+        <h1>Click Counter</h1>
+        <button id="clickButton">Click Me!</button>
+        <p id="clickCount">You have clicked 0 times</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+JavaScript:
+
+javascript
+Copy code
+let count = 0;
+document.getElementById('clickButton').onclick = function() {
+    count++;
+    document.getElementById('clickCount').textContent = `You have clicked ${count} times`;
+};
+2. Project 2: Change Color on Double Click (Using ondblclick)
+
+Description: A box changes its background color when double-clicked.
+HTML:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Click Color Change</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box" id="colorBox"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+JavaScript:
+
+javascript
+Copy code
+document.getElementById('colorBox').ondblclick = function() {
+    this.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+};
+3. Project 3: Hover to Display Tooltip (Using onmouseover and onmouseout)
+
+Description: A tooltip appears when hovering over an element.
+HTML:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Tooltip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="hoverButton">Hover over me!</button>
+    <div id="tooltip" class="tooltip hidden">This is a tooltip!</div>
+    <script src="script.js"></script>
+</body>
+</html>
+JavaScript:
+
+javascript
+Copy code
+let button = document.getElementById('hoverButton');
+let tooltip = document.getElementById('tooltip');
+
+button.onmouseover = function() {
+    tooltip.classList.remove('hidden');
+};
+
+button.onmouseout = function() {
+    tooltip.classList.add('hidden');
+};
+4. Project 4: Key Press Display (Using onkeydown and onkeyup)
+
+Description: Display the key pressed by the user.
+HTML:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Display</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Press any key to see it displayed</h1>
+    <div id="keyDisplay">No key pressed yet</div>
+    <script src="script.js"></script>
+</body>
+</html>
+JavaScript:
+
+javascript
+Copy code
+document.onkeydown = function(event) {
+    document.getElementById('keyDisplay').textContent = `You pressed: ${event.key}`;
+};
+5. Project 5: Long Press Button (Using onmousedown and onmouseup)
+
+Description: A message is displayed if the button is long-pressed.
+HTML:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Press Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="longPressButton">Long Press Me!</button>
+    <div id="longPressMessage" class="hidden">Button was long pressed!</div>
+    <script src="script.js"></script>
+</body>
+</html>
+JavaScript:
+
+javascript
+Copy code
+let timeout;
+document.getElementById('longPressButton').onmousedown = function() {
+    timeout = setTimeout(function() {
+        document.getElementById('longPressMessage').classList.remove('hidden');
+    }, 1000); // 1 second long press
+};
+
+document.getElementById('longPressButton').onmouseup = function() {
+    clearTimeout(timeout);
+};
+These projects demonstrate various event listeners (onclick, ondblclick, onmouseover, onmouseout, onkeydown, onkeyup, onmousedown, and onmouseup) in action and give you a range of examples to understand how event listeners work in JavaScript.
+
+
+
+
+
+
