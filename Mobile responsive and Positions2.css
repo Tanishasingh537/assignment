@@ -1,0 +1,95 @@
+
+1. What is the position property in CSS and its types?
+The position property in CSS is used to control the positioning of an element within a document. It specifies how an element is positioned in relation to its containing element or the viewport. The position property allows you to place elements precisely where you want them on the page, relative to other elements or to the browser window.
+
+Types of position in CSS:
+
+static: This is the default position value. Elements are positioned according to the normal document flow, and top, right, bottom, and left properties have no effect.
+
+css
+Copy code
+.box {
+  position: static;
+}
+relative: The element is positioned relative to its normal position in the document flow. You can use top, right, bottom, and left properties to adjust its position relative to where it would normally be.
+
+css
+Copy code
+.box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+absolute: The element is positioned relative to the nearest positioned ancestor (an ancestor with a position value other than static). If no such ancestor exists, it is positioned relative to the initial containing block (usually the viewport).
+
+css
+Copy code
+.box {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+fixed: The element is positioned relative to the viewport, meaning it stays in the same position on the screen even when the page is scrolled. This is useful for elements like sticky headers or floating buttons.
+
+css
+Copy code
+.box {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+sticky: The element is positioned based on the user's scroll position. It behaves like relative until it reaches a certain point in the viewport, at which point it "sticks" and behaves like fixed. This is useful for elements like sticky navigation bars.
+
+css
+Copy code
+.box {
+  position: sticky;
+  top: 0;
+}
+
+
+2. How many types of positioning are there in CSS?
+There are five main types of positioning in CSS:
+
+Static (default)
+Relative
+Absolute
+Fixed
+Sticky
+Each type has its own behavior and use cases, allowing for a variety of layout possibilities in web design.
+
+
+
+
+3. What is z-index and why is it used?
+The z-index property in CSS controls the stacking order of elements that overlap each other. It determines which elements appear on top or below others when they occupy the same space on the page. z-index only works on elements that have a position value of relative, absolute, fixed, or sticky.
+
+Higher z-index values: Elements with higher z-index values are positioned on top of those with lower values.
+Lower z-index values: Elements with lower z-index values appear underneath those with higher values.
+Example:
+
+css
+Copy code
+.box1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.box2 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+}
+In this example, .box1 will appear on top of .box2 because it has a higher z-index value.
+
+4.Why use z-index?
+z-index is used to control the visual layering of elements on a webpage, especially when creating complex layouts with overlapping elements. It ensures that important elements are visible and layered correctly, such as dropdown menus, modal dialogs, or any content that needs to appear above others.
+
+
+
+
+
+
